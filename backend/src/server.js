@@ -1,3 +1,6 @@
+app.get("/", (req, res) => {
+  res.send("CyberKavach API is running. Use /api/health to check status.");
+});
 const express = require("express");
 const cors = require("cors");
 require("dotenv").config();
