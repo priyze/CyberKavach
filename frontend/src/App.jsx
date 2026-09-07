@@ -1,7 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-// Normal Citizen Imports
 import ModeSelection from "./components/citizen/ModeSelection";
 import HomeScreen from "./components/citizen/HomeScreen";
 import InputScreen from "./components/citizen/InputScreen";
@@ -9,10 +8,8 @@ import ResultScreen from "./components/citizen/ResultScreen";
 import ReportSuccess from "./components/citizen/ReportSuccess";
 import EmergencyHelp from "./components/citizen/EmergencyHelp";
 
-// Elderly Wrapper Import
 import ElderlyApp from "./components/elderly/ElderlyApp";
 
-// Portal Imports
 import RoleSelect from "./components/portal/RoleSelect";
 import Dashboard from "./components/portal/Dashboard";
 import ReportsTable from "./components/portal/ReportsTable";
@@ -24,18 +21,12 @@ export default function App() {
   return (
     <Routes>
       <Route path="/" element={<ModeSelection />} />
-      
-      {/* Citizen Routes */}
       <Route path="/citizen" element={<HomeScreen />} />
       <Route path="/citizen/check" element={<InputScreen />} />
       <Route path="/citizen/result" element={<ResultScreen />} />
       <Route path="/citizen/success" element={<ReportSuccess />} />
       <Route path="/citizen/help" element={<EmergencyHelp />} />
-      
-      {/* Elderly Route (Uses the state-machine wrapper) */}
       <Route path="/elderly" element={<ElderlyApp />} />
-      
-      {/* Portal Routes */}
       <Route path="/admin" element={<RoleSelect />} />
       <Route path="/admin/dashboard" element={<Dashboard />} />
       <Route path="/admin/reports" element={<ReportsTable />} />
